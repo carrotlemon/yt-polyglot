@@ -1,0 +1,62 @@
+/* When our extension is loaded, suppress YT's native caption renderer.
+   We trigger YT to load captions (to capture the working URL) — without this
+   rule, captions would briefly flash on screen. */
+html.ytpolyglot-loaded .ytp-caption-window-container {
+  display: none !important;
+}
+
+.ytpolyglot-subtitle {
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  max-width: 80%;
+  pointer-events: none;
+  opacity: 0;
+  transition: opacity 0.15s ease;
+  z-index: 9999;
+  white-space: nowrap;
+}
+
+.ytpolyglot-subtitle.visible {
+  opacity: 1;
+}
+
+.ytpolyglot-lang-label {
+  display: none;
+  font-family: YouTube Noto, Roboto, Arial, sans-serif;
+  font-size: 11px;
+  font-weight: 700;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 3px;
+  padding: 1px 5px;
+  flex-shrink: 0;
+  white-space: nowrap;
+}
+
+html.ytpolyglot-show-labels .ytpolyglot-lang-label {
+  display: inline-block;
+}
+
+.ytpolyglot-text {
+  font-family: YouTube Noto, Roboto, Arial, sans-serif;
+  font-size: 20px;
+  font-weight: 400;
+  color: #fff;
+  background: rgba(0, 0, 0, 0.75);
+  border-radius: 4px;
+  padding: 3px 10px;
+  line-height: 1.4;
+  white-space: normal;
+  text-align: center;
+}
+
+/* Slightly smaller text when 3+ languages active */
+.ytpolyglot-subtitle:nth-child(n+3) .ytpolyglot-text {
+  font-size: 17px;
+}
