@@ -28,20 +28,6 @@ Firefox 109 or newer is required (for Manifest V3 support).
 3. Click **Load Temporary Add-on…**.
 4. Select the `manifest.json` file in the project folder.
 
-### Persistent install
-
-For a permanent install you need to package the extension as a `.zip` and either:
-
-- Submit it to [addons.mozilla.org](https://addons.mozilla.org/) for distribution, OR
-- Sign it yourself for self-distribution via Mozilla's signing API, OR
-- Use Firefox Developer Edition / Nightly / ESR with `xpinstall.signatures.required` set to `false` in `about:config`, then load the `.zip` from `about:addons` → gear icon → **Install Add-on From File…**.
-
-To make the `.zip`, run this from the project folder:
-
-```bash
-zip -r ytpolyglot.zip . -x "*.git*" "README.md"
-```
-
 ## How to use
 
 1. Open any YouTube video that has subtitles available.
