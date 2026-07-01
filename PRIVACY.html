@@ -1,0 +1,126 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>YT Polyglot — Privacy Policy</title>
+  <style>
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Arial, sans-serif;
+      max-width: 720px;
+      margin: 4rem auto;
+      padding: 0 1.5rem;
+      line-height: 1.6;
+      color: #222;
+      background: #fff;
+    }
+    h1 {
+      border-bottom: 3px solid #ff0000;
+      padding-bottom: 0.5rem;
+      margin-bottom: 0.5rem;
+    }
+    h2 {
+      margin-top: 2.5rem;
+      color: #111;
+    }
+    .meta {
+      color: #666;
+      font-size: 0.9em;
+    }
+    code {
+      background: #f4f4f4;
+      padding: 2px 6px;
+      border-radius: 3px;
+      font-size: 0.9em;
+      font-family: "SF Mono", Menlo, Consolas, monospace;
+    }
+    ul {
+      padding-left: 1.5rem;
+    }
+    li {
+      margin-bottom: 0.5rem;
+    }
+  </style>
+</head>
+<body>
+  <h1>YT Polyglot — Privacy Policy</h1>
+  <p class="meta">Last updated: 2026-06-11</p>
+
+  <h2>Summary</h2>
+  <p>
+    YT Polyglot does not collect, store, transmit, sell, or share any personal
+    information. The extension operates entirely within your browser.
+  </p>
+
+  <h2>What the extension stores</h2>
+  <p>
+    The extension uses Chrome's <code>chrome.storage.local</code> API to save
+    your preferences locally on your device:
+  </p>
+  <ul>
+    <li>The list of subtitle languages you have selected as active</li>
+    <li>Whether the "Original only" filter is on</li>
+    <li>Whether the "Show language labels on subtitles" setting is on</li>
+  </ul>
+  <p>
+    This data never leaves your browser. It is not synced to any cloud service
+    by the extension. (Your browser's own sync settings, if enabled, are
+    controlled by you in your browser settings, not by this extension.)
+  </p>
+
+  <h2>What the extension does on the network</h2>
+  <p>
+    YT Polyglot makes network requests only to <code>youtube.com</code>, using
+    YouTube's own caption and auto-translation APIs — the same APIs YouTube's
+    built-in player uses. No requests are made to any other domain.
+  </p>
+  <p>
+    The extension performs no translation itself. Auto-translated subtitle
+    tracks are translated by YouTube/Google on YouTube's servers; this
+    extension only displays the result.
+  </p>
+
+  <h2>What the extension does not do</h2>
+  <ul>
+    <li>No analytics — no Google Analytics, no Mixpanel, no Sentry, nothing.</li>
+    <li>No third-party servers — there is no backend.</li>
+    <li>No tracking — the extension does not observe what you watch, search, or click.</li>
+    <li>No advertising.</li>
+    <li>No selling or sharing of user data — there is no user data to sell.</li>
+    <li>No remote code execution — all code is bundled in the extension package.</li>
+  </ul>
+
+  <h2>Permissions</h2>
+  <ul>
+    <li>
+      <strong><code>storage</code></strong> — to remember your selected
+      subtitle languages between sessions.
+    </li>
+    <li>
+      <strong><code>host_permissions</code> for <code>*.youtube.com</code></strong>
+      — to read the page's caption track list and overlay subtitle elements
+      onto the YouTube player. The extension does not run on any other site.
+    </li>
+  </ul>
+
+  <h2>Children</h2>
+  <p>
+    YT Polyglot does not knowingly collect data from children or any other
+    users, because it does not collect data from anyone.
+  </p>
+
+  <h2>Changes to this policy</h2>
+  <p>
+    If this policy changes, the "Last updated" date above will be revised. The
+    extension's data-handling behavior is unlikely to change because it
+    currently handles no user data.
+  </p>
+
+  <h2>Contact</h2>
+  <p>
+    Questions or concerns: please open an issue on the project's source
+    repository, or contact the maintainer at the email shown on the Chrome
+    Web Store listing.
+  </p>
+</body>
+</html>
